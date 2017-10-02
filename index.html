@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>findThePrecious</title>
+	<meta charset="utf-8">
+	<!-- import BS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container-fluid">
+	<header>
+
+		<!-- Navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+		    	<div class="navbar-header">
+		    		<img src="assets/images/logo.png" alt="findtheprecious">
+
+		    		<!-- Burger button -->
+		    		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nvb" aria-expanded="true">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+
+		    	</div>
+
+		    	<!-- collapsed navbar -->
+
+		    	<div class="collapse navbar-collapse" id="nvb">
+			    	<ul class="nav navbar-nav navbar-right">
+			    		<li><a href="#">Fellows</a></li>
+				    	<li><span class="navbar-text">|</span></li>
+						<li><a href="#">The Ring</a></li>
+						<li><span class="navbar-text">|</span></li>
+						<li><a href="#">Get my reward</a></li>
+						<li><span class="navbar-text">|</span></li>
+						<li><a href="#">Best hunters</a></li>
+						<li><span class="navbar-text">|</span></li>
+						<li><a href="#">Join the army</a></li>
+						<li><span class="navbar-text">|</span></li>
+						<li><a href="#">Contact us</a></li>
+			    	</ul>
+		    	</div>
+			</div>
+		</nav>
+
+		<!-- Carousel -->
+		<div id="header-carousel" class="row carousel slide" data-ride="carousel">
+		    <!-- Indicators -->
+		    <!--<ol class="carousel-indicators">
+		    	<li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+		    	<li data-target="#header-carousel" data-slide-to="1"></li>
+		    	<li data-target="#header-carousel" data-slide-to="2"></li>
+		    </ol>-->
+
+		    <!-- Wrapper for slides -->
+		    <div class="carousel-inner">
+
+		     	<div class="item active">
+		        	<img src="http://via.placeholder.com/750x300" alt="Dangerous Fellowers" style="width:100%;">
+		        	<div class="carousel-caption">
+		          	<h3>Dangerous fellowship try to destroy the ring</h3>
+		          	<p>Orcs, Goblins, Balrogs, protect your master Sauron !</p>
+		        	</div>
+		    	</div>
+
+		    	<div class="item">
+					<img src="http://via.placeholder.com/750x300" alt="Dangerous Fellowers" style="width:100%;">
+		        	<div class="carousel-caption">
+		          	<h3>Dangerous fellowship try to destroy the ring</h3>
+		          	<p>Orcs, Goblins, Balrogs, protect your master Sauron !</p>
+		        	</div>
+		    	</div>
+		    
+		    	<div class="item">
+		      		<img src="http://via.placeholder.com/750x300" alt="Dangerous Fellowers" style="width:100%;">
+		        	<div class="carousel-caption">
+		          	<h3>Dangerous fellowship try to destroy the ring</h3>
+		          	<p>Orcs, Goblins, Balrogs, protect your master Sauron !</p>
+		        	</div>
+		    	</div>
+		  
+			</div>
+
+		    <!-- Left and right controls -->
+		    <a class="left carousel-control" href="#header-carousel" data-slide="prev">
+		    	<span class="glyphicon glyphicon-chevron-left"></span>
+		    	<span class="sr-only">Previous</span>
+		    </a>
+		    <a class="right carousel-control" href="#header-carousel" data-slide="next">
+		    	<span class="glyphicon glyphicon-chevron-right"></span>
+		    	<span class="sr-only">Next</span>
+		    </a>
+		</div> <!-- end header-carousel -->
+
+	</header>
+
+	<div id="inner-body">
+
+		<section id="fellows">
+
+			<h2><span class="symbol">ij</span> Fellows wanted dead <small>(or alive if you to eat them later)</small> <span class="symbol">ij</span></h2>
+			<!-- Pills -->
+			<!-- Ne pas oublier les collapse sur les != row de thumbnails pour aller avec le pills -->
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<ul class="nav nav-pills">
+						<li role="presentation"><a data-target="#pill_wanted" href="#"><span class="symbol">b</span> Most wanted <span class="symbol">b</span></a></li>
+						<li role="presentation" class="active"><a data-target="#pill_dangerous" href="#"><span class="symbol">b</span> Most dangerous <span class="symbol">b</span> </a></li>
+						<li role="presentation"><a data-target="#pill_captured" href="#"><span class="symbol">b</span> Already captured <span class="symbol">b</span></a></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Thumbnails -->
+			<!-- add dead class to thumbnail for dead fellow flagging -->
+
+			<!-- Most wanted -->
+			<div id="pill_wanted" class="row">
+				<div class="col-sm-4"> <!-- Thumbnail bloc begins here -->
+					<div class="thumbnail">
+						<div class="fellow">
+					    	<img class="img-responsive" src="assets/images/frodo.jpg" alt="portrait of Gandalf">
+					    	<p>Reward<br/>
+					    	<span class="price">1000</span> golden coins</p>
+							<h1>frodo</h1>
+						</div>
+
+				    	<div class="caption">
+				        	<p>a very dangerous wizard, balrog killer ...</p>
+				        </div>
+				    </div> <!-- end thumbnail -->
+			    </div>
+
+			    <div class="col-sm-4"> <!-- Thumbnail bloc begins here -->
+					<div class="thumbnail">
+						<div class="fellow">
+					    	<img class="img-responsive" src="assets/images/aloth.png" alt="portrait of Gandalf">
+					    	<p>Reward<br/>
+					    	<span class="price">1000</span> golden coins</p>
+							<h1>aloth</h1>
+						</div>
+
+				    	<div class="caption">
+				        	<p>sauron's finger says him his sword is dangerous ...</p>
+				        </div>
+				    </div> <!-- end thumbnail -->
+			    </div>
+
+			    <div class="col-sm-4"> <!-- Thumbnail bloc begins here -->
+					<div class="thumbnail">
+						<div class="fellow">
+					    	<img class="img-responsive" src="assets/images/thorin.jpg" alt="portrait of Gandalf">
+					    	<p>dead</p>
+							<h1>Thorin</h1>
+						</div>
+
+				    	<div class="caption">
+				        	<p>the leader of a dwarves company ...</p>
+				        </div>
+				    </div> <!-- end thumbnail -->
+			    </div>
+			</div> <!-- end of pill and end of thumbnails row -->
+
+			<!-- Most dangerous -->
+			<div id="pill_dangerous" class="row">
+				<div class="col-sm-4"> <!-- Thumbnail bloc begins here -->
+					<div class="thumbnail">
+						<div class="fellow">
+					    	<img class="img-responsive" src="assets/images/gandalf.png" alt="portrait of Gandalf">
+					    	<p>Reward<br/>
+					    	<span class="price">1000</span> golden coins</p>
+							<h1>gandalf</h1>
+						</div>
+
+				    	<div class="caption">
+				        	<p>a very dangerous wizard, balrog killer ...</p>
+				        </div>
+				    </div> <!-- end thumbnail -->
+			    </div>
+
+			    <div class="col-sm-4"> <!-- Thumbnail bloc begins here -->
+					<div class="thumbnail">
+						<div class="fellow">
+					    	<img class="img-responsive" src="assets/images/aragorn.jpg" alt="portrait of Gandalf">
+					    	<p>Reward<br/>
+					    	<span class="price">1000</span> golden coins</p>
+							<h1>aragorn</h1>
+						</div>
+
+				    	<div class="caption">
+				        	<p>sauron's finger says him his sword is dangerous ...</p>
+				        </div>
+				    </div> <!-- end thumbnail -->
+			    </div>
+
+			    <div class="col-sm-4"> <!-- Thumbnail bloc begins here -->
+					<div class="thumbnail">
+						<div class="fellow dead">
+					    	<img class="img-responsive" src="assets/images/thorin.jpg" alt="portrait of Gandalf">
+					    	<p>dead</p>
+							<h1>thorin</h1>
+						</div>
+
+				    	<div class="caption">
+				        	<p>the leader of a dwarves company ...</p>
+				        </div>
+				    </div> <!-- end thumbnail -->
+			    </div>
+			</div> <!-- end of pill and end of thumbnails row -->
+
+			<!-- Already captured -->
+			<div id="pill_captured" class="row">
+				<div class="col-sm-4"> <!-- Thumbnail bloc begins here -->
+					<div class="thumbnail">
+						<div class="fellow captured">
+					    	<img class="img-responsive" src="assets/images/legolas.jpg" alt="portrait of Legolas">
+					    	<p>captured</p>
+							<h1>legolas</h1>
+						</div>
+
+				    	<div class="caption">
+				        	<p>a very dangerous wizard, balrog killer ...</p>
+				        </div>
+				    </div> <!-- end thumbnail -->
+			    </div>
+
+			    <div class="col-sm-4"> <!-- Thumbnail bloc begins here -->
+					<div class="thumbnail">
+						<div class="fellow captured">
+					    	<img class="img-responsive" src="assets/images/eder.png" alt="portrait of Gandalf">
+					    	<p>captured</p>
+							<h1>eder</h1>
+						</div>
+
+				    	<div class="caption">
+				        	<p>sauron's finger says him his sword is dangerous ...</p>
+				        </div>
+				    </div> <!-- end thumbnail -->
+			    </div>
+
+			    <div class="col-sm-4"> <!-- Thumbnail bloc begins here -->
+					<div class="thumbnail">
+						<div class="fellow dead">
+					    	<img class="img-responsive" src="assets/images/boromir.jpg" alt="portrait of Gandalf">
+					    	<p>dead</p>
+							<h1>boromir</h1>
+						</div>
+
+				    	<div class="caption">
+				        	<p>the leader of a dwarves company ...</p>
+				        </div>
+				    </div> <!-- end thumbnail -->
+			    </div>
+			</div> <!-- end of pill and end of thumbnails row -->
+
+		</section>
+
+		<hr/>
+
+		<section id="reward">
+			<h2><span class="symbol">ij</span> I have captured one of them, how to get my reward ? <span class="symbol">ij</span></h2>
+			<div class="row">
+				<p class="col-sm-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+				<div class="col-sm-3">
+					<img class="img-responsive" src="assets/images/sauron_dollar.png" alt="Sauron 10$ Coin">
+				</div>
+			</div>
+			<div class="div-button">
+				<button>Contact us</button>
+			</div>
+		</section>
+		<hr/>
+
+		<section id="hunters">
+			<h2><span class="symbol">ij</span> Our Best Hunters <span class="symbol">ij</span></h2>
+
+			<div class="row">
+				<div class="media col-sm-6">
+					<div class="media-left media-middle">
+						<img src="assets/images/hunter1.png" class="media-object" style="width:120px" alt="Avatar of Best Hunter 1">
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">elveskiller22</h4>
+						<p>2 captures - <a href="#">Profile</a><br/>
+						<button><img src="assets/images/ring.png" alt="ring"> 12 hate</button></p>
+					</div>
+				</div>
+
+				<div class="media col-sm-6">
+					<div class="media-left media-middle">
+						<img src="assets/images/styx_portrait.jpg" class="media-object" style="width:120px" alt="Avatar of Best Hunter 2">
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">goblin45</h4>
+						<p>2 captures - <a href="#">Profile</a><br/>
+						<button><img src="assets/images/ring.png" alt="ring"> 18 hate</button></p>
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+
+		<hr/>
+
+		<section id="ring">
+			<h2><span class="symbol">ij</span> About the ring <span class="symbol">ij</span></h2>
+			<!-- panel 1 -->
+			<div class="panel panel-default">
+				<div class="panel-heading">Ring Capabilities</div>
+				<div class="panel-body">
+					<p>What can our master Sauron do with the ring ?</p>
+					<table>
+						<tr>
+							<th>Feature</th>
+							<th>Description</th>
+						</tr>
+						<tr>
+							<td>Main</td>
+							<td>One ring to rules them all</td>
+						</tr>
+						<tr>
+							<td>Invisibility</td>
+							<td>You can't see me</td>
+						</tr>
+						<tr>
+							<td>Power</td>
+							<td>Destroy the world</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+			<!-- Panel 2 -->
+			<div class="panel panel-default">
+				<div class="panel-heading">Why the ring is so awesome ?</div>
+				<div class="panel-body">
+
+					<div class="media">
+						<div class="media-body">
+							<p>My precioooooooussssss ! Hrk Hrk, we want our preecioooouuuussssss !!<br><span class="pull-right">Gollum</span></p>
+						</div>
+
+						<div class="media-right media-middle">
+							<img class="img-circle" src="assets/images/gollum.png" class="media-object" style="width:120px" alt="portrait of gollum">
+						</div>
+					</div>
+
+				</div>
+			</div>
+			
+		</section>
+
+		<hr/>
+
+		<section id="join">
+			<div class="row">
+				<h2> <span class="symbol">ij</span> Join Mordor Army, we need you ! <span class="symbol">ij</span></h2>
+				<img src="http://via.placeholder.com/140x140" alt="portrait">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<button>More info on SauronRulesThemAll.com</button>
+			</div>
+		</section>
+
+		<hr/>
+
+		<section id="contact">
+			<div class="row">
+				<h2> <span class="symbol">ij</span> Contact us <span class="symbol">ij</span></h2>
+				<form action="#">
+					<div class="form-group col-sm-6 col-lg-4">
+						<div class="input-group">
+							<input type="email" name="user_email" class="form-control" placeholder="@">
+						</div>
+						<div class="input-group">
+							<input type="text" name="user_adress" class="form-control" placeholder="Address">
+						</div>
+						<div class="input-group">
+								<select class="form-control" name="user_subject">
+									<option value="1">I have seen one of them</option>
+				  					<option value="2">I dream to become a Hobbit</option>
+								</select>
+								<i class="glyphicon glyphicon-triangle-bottom"></i>
+						</div>
+						<div class="input-group">
+							<textarea name="user_message">Your message to the Master</textarea> 
+						</div>
+					</div>
+				</form>
+
+				<div class="col-sm-6 col-lg-4 col-lg-offset-2 hidden-xs">
+					<img class="img-responsive" src="assets/images/map.png" alt="Map of the middle earth">
+				</div>
+
+			</div> <!-- end row -->
+		</section>
+	</div>
+
+	<footer>
+		<div class="row">
+			<div class="col-sm-4">
+				<ul>
+					<li>About us</li>
+					<li>Fellows</li>
+					<li>Join our army</li>
+				</ul>
+			</div>
+			<div class="col-sm-4">
+				<ul>
+					<li>FAQ</li>
+					<li>Reward conditions</li>
+					<li>Legal mentions</li>
+				</ul>
+			</div>
+			<div class="col-sm-4">
+				<p>Sauron4Ever.com<br/>
+				Follow him also on twitter</p>
+				<img class="img-responsive" src="assets/images/logo.png" alt="findtheprecious">
+			</div>
+		</div>
+	</footer>
+
+</div> <!-- end container-fluid -->
+
+	<!-- import Jquery and BS JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript">
+		$('document').ready(function() {
+			/** Nav-pills **/
+			/* the good fellows thumbnails bloc is active on loading */
+			$('[id*=pill_]').hide(); // fadeout all
+			$('[id=pill_dangerous]').show(); // fadein this
+
+			/* Collapsing toggling for nav-pills fellow section */
+			$('.nav-pills li').on('click', function(e) {
+				e.preventDefault();
+				// changing active on nav-pill
+				$('.nav-pills li').removeClass('active'); // fadeout all
+				$(this).addClass('active');
+
+				// changing the visible row
+				var refId = $(this).find('a').data('target');
+				$('[id*=pill_]').hide(); // fadeout all
+				$(refId).fadeIn(1500); // fadein this
+			});
+
+		});
+	</script>
+</body>
+</html>

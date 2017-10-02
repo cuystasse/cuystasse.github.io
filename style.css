@@ -1,0 +1,489 @@
+/* Fonts */
+
+/* var */
+:root {
+	--orange-color: rgb(255,95,1);
+}
+
+@font-face {
+	/* aniron :: primary font */
+	font-family: 'aniron';
+	src: url(assets/fonts/aniron/anirm___.ttf);
+
+	font-family: 'aniron';
+	src: url(assets/fonts/aniron/anirb___.ttf);
+	font-weight: bold;
+}
+
+@font-face {
+	/* party_business :: secondary font */
+	font-family: 'party_business';
+	src: url(assets/fonts/party_business/partybusiness.ttf);
+}
+
+@font-face {
+	/* tangwar :: decoration font */
+	font-family: 'tengwar';
+	src: url(assets/fonts/tengwar/tengwar-cursive.ttf);
+}
+
+* {
+	font-family: 'aniron';
+}
+
+p {
+	font-family: 'party_business';
+}
+
+.symbol {
+	font-family: 'tengwar';
+}
+
+h2 .symbol {
+	position: relative;
+	bottom: 15px;
+	color: var(--orange-color);
+}
+
+/* CSS Styling */
+
+body {
+	padding-top: 52px;
+}
+
+/*.container-fluid {
+	padding-right: 0;
+	padding-left: 0;
+}*/
+
+section { /* pour virer le padding des section inclues dans un container mais pas dans une row */
+	margin-right: -15px;
+	margin-left: -15px;
+	padding-right: 15px; 
+	padding-left: 15px;
+}
+
+/* Virer les margin des titre pour ajouter u padding >> friendly bg */
+h1, h2 {
+	margin-top: 0;
+	/*margin-bottom: 0;*/
+	padding-top: 45px;
+	padding-bottom: 30px;
+	font-size: 1.5em;
+}
+h1 small, h2 small {
+	color: black;
+}
+
+hr { /* Styling hr border */
+	width: 50%;
+	margin: 0 auto;
+	border: solid 2px var(--orange-color);
+
+	transform: skew(-45deg);
+	/*position: relative;
+	transform: translate(0, 100%);
+	margin-top: -2px;*/
+}
+
+
+/* Alternate bg color of sections in inner-body */
+/** + adapatation of font color to bg **/
+#inner-body  section:nth-child(4n+1) { /* white bg */
+	background: #F3F0E9;
+	color: black;
+}
+
+#inner-body  section:nth-child(4n+3) { /* black bg */
+	background: #1B1B1B;
+	color: white;
+}
+
+/* nav */
+
+.navbar {
+	background: var(--orange-color);
+}
+
+.navbar-nav {
+	width: 70%;
+	font-size: 0.9em;
+}
+
+.navbar-collapse.in {/* prevent scrolling on collapsing navbar */
+	/* trick find at :
+	https://stackoverflow.com/questions/31291034/bootstrap-dropdown-menu-remove-scrollbar */
+	overflow: hidden;
+    max-height: none !important;
+	height: auto !important;
+}
+
+.navbar .navbar-header img {
+	position: relative;
+	top: 10px;
+}
+
+.navbar li.active a {
+    background: red;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: white;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.navbar-default .navbar-text {
+	color: white;
+}
+
+/* Carousel */
+
+.carousel-caption {
+	top: 20%;
+}
+
+/* Fellows */
+
+/** nav pills **/
+.nav-pills {
+	display: inline-block;
+	margin-bottom: 10px;
+	font-size: 1.1em;
+}
+
+.nav-pills li a,
+.nav-pills li.active a,
+.nav-pills li a:focus,
+.nav-pills li.active a:focus { 
+	background: none;
+	color: rgb(118,117,113);
+}
+
+.nav-pills li.active a,
+.nav-pills li.active a:focus {
+	border-bottom: var(--orange-color) solid 4px;
+	color: var(--orange-color);
+}
+
+.nav-pills li a:hover,
+.nav-pills li.active a:hover {
+	background: black;
+	color: var(--orange-color);
+}
+
+.nav-pills li.active a span,
+.nav-pills li a:hover span { /* symbol */
+	visibility: visible;
+}
+
+.nav-pills li a span { /* symbol */
+	font-size: 2em;
+	visibility: hidden;
+}
+
+.nav-pills li a span:last-child() { /* symbol */
+	font-size: 2em;
+	visibility: hidden;
+	transform: rotateY(180deg);
+}
+
+.nav-pills li.active a:focus {
+	background: none;
+}
+
+/*#fellows {
+	background: rgb(245,242,235);
+}*/
+
+/** Animate Thumbnails **/
+.thumbnail {
+	background: black;
+	min-height: 500px;
+}
+
+.thumbnail * {
+	font-family: 'party_business';
+}
+
+.fellow {
+	position: relative;
+}
+
+.fellow img {
+	width: 100%;
+	height: auto;
+	z-index: -1;
+	opacity: 0.6;
+	transition: opacity 0.8s;
+	padding-top: 2px;
+}
+
+.fellow p { /* reward text */
+
+	position: absolute;
+	text-align: center;
+	width: 75%;
+	top: 7.5%;
+	left: 50%;
+	transform: translate(-50%, 0);
+
+	opacity: 0.85;
+	font-size: 2em;
+	background-color: white;
+	border-radius: 5px;
+	transition: opacity 0.8s;
+
+	box-shadow: 3px 3px 3px white,
+				3px -3px 3px white,
+				-3px 3px 3px white,
+				-3px -3px 3px white;
+}
+
+.dead p, .captured p { /* dead and captured fellow */
+	position: absolute;
+	text-align: center;
+	width: 75%;
+	top: 7.5%;
+	left: 50%;
+	transform: translate(-50%, 0);
+
+	opacity: 1;
+	font-size: 3.5em;
+	background-color: rgba(0,0,0,0);
+	transition: opacity 0.8s;
+
+	box-shadow: none;
+	color: var(--orange-color);
+}
+
+.fellow p .price {
+	color: var(--orange-color);
+}
+
+.fellow h1 {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 30%;
+	color: white;
+	font-size: 4em;
+	transition: bottom 0.8s;
+}
+
+.dead h1 {
+	text-decoration: line-through var(--orange-color);
+}
+
+/* hovering */
+.fellow:hover img {
+	transition: opacity 0.8s;
+	opacity: 1;
+}
+
+.fellow:hover p {
+	transition: opacity 0.8s;
+	opacity: 0;
+}
+
+.fellow:hover h1 {
+	transition: bottom 0.8s;
+	bottom: 2%;
+}
+
+.thumbnail .caption {
+	padding-bottom: 0;
+}
+
+.thumbnail .caption p {
+	color: #CCC;
+	font-size: 2.1em;
+	margin-bottom: 0;
+}
+
+/* Reward */
+#reward .row {
+	width: 90%;
+	margin: auto;
+	box-shadow: none; 
+}
+
+#reward p {
+	font-size: 1.8em;
+}
+
+/** Reward button **/
+#reward .div-button {
+	text-align: center;
+}
+
+#reward button {
+	width: 225px;
+	height: 65px;
+	margin: 30px auto;
+	transform: skew(-20deg);
+
+	font-size: 1.6em;
+
+	background-color: white;
+	color: var(--orange-color);
+	border: none;
+	transition: 0.5s;
+}
+
+#reward button:hover {
+	transition: 0.5s;
+	background-color: var(--orange-color);
+	color: white;
+	box-shadow: 2px 2px 2px var(--orange-color),
+				2px -2px 2px var(--orange-color),
+				-2px 2px 2px var(--orange-color),
+				-2px -2px 2px var(--orange-color);
+}
+
+/* Hunters */
+.media:first-child {
+	margin-top: 15px;
+}
+
+#hunters .row {
+	padding-bottom: 25px;
+}
+
+#hunters p, #hunters a, #hunters h4 {
+	font-family: 'party_business';
+}
+
+#hunters h4.media-heading {
+	color: var(--orange-color);
+	font-size: 3.5em;
+	margin-bottom: -5px;
+}
+
+#hunters p {
+	font-size: 1.6em;
+}
+
+#hunters a {
+	color: black;
+	text-decoration: underline;
+}
+
+#hunters button {
+/*	width: 100px;
+	height: 35px;*/
+	margin-left: 7px;
+	transform: skew(-20deg);
+
+	/*font-size: 1.6em;*/
+
+	background-color: black;
+	color: var(--orange-color);
+	border: none;
+	transition: 0.5s;
+	font-size: 1.2em;
+	transition: 0.5s;
+}
+
+#hunters button:hover {
+	transition: 0.5s;
+	background-color: var(--orange-color);
+	color: black;
+}
+
+#hunters .media img {
+	border-radius: 15px;
+}
+
+/* About the ring */
+#ring {
+	padding-bottom: 10px;
+	padding-right: 4%;
+	padding-left: 4%;
+}
+
+.panel-default > .panel-heading {
+	background-color: var(--orange-color);
+}
+
+.panel {
+	border-bottom: 4px solid var(--orange-color);
+	border-radius: 10px 10px 0 0;
+	margin-bottom: 15px;
+
+	color: black;
+}
+
+.panel-heading {
+	border-radius: 10px 10px 0 0;
+}
+
+
+/* Contact */
+.input-group {
+	margin: 25px;
+	width: 90%;
+}
+
+.input-group .form-control:last-child,
+.input-group .form-control:first-child,
+textarea {
+	border-radius: 5px;
+}
+
+textarea {
+	color: grey;
+	width: 100%;
+	height: 125px;
+}
+
+select[class*='form-control'] { /* remove arrow on select input */
+	font-size: 0.9em;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+}
+
+select + i {
+	z-index: 2;
+	color: black;
+	float: right;
+	margin-top: -25px;
+	margin-right: 5px;
+	pointer-events: none;
+	/*background-color: #fff;*/
+  	padding-right: 5px;
+}
+
+/* Footer */
+
+footer .row {
+	color: white;
+	background: var(--orange-color);
+}
+
+footer ul {
+	list-style-type: none;
+}
+
+footer ul li {
+	padding: 10px 0;
+}
+
+footer img {
+	position: absolute;
+	top: 80px;
+}
+
+footer .col-sm-4:last-child() p {
+	font-size: 2em;
+}
+
+footer div {
+	padding-top: 8px;
+}
+
+footer div p {
+	font-family: 'aniron';
+	font-size: 1em;
+}
